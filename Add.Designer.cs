@@ -47,7 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.N = new System.Windows.Forms.TextBox();
             this.dgv1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
@@ -207,17 +206,8 @@
             this.dgv1.Name = "dgv1";
             this.dgv1.RowHeadersWidth = 62;
             this.dgv1.RowTemplate.Height = 28;
-            this.dgv1.Size = new System.Drawing.Size(597, 458);
+            this.dgv1.Size = new System.Drawing.Size(583, 458);
             this.dgv1.TabIndex = 27;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(291, 436);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 45);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -253,7 +243,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.N);
             this.Controls.Add(this.dgv1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Name = "Add";
             this.Text = "Add";
@@ -285,7 +274,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox N;
         private System.Windows.Forms.DataGridView dgv1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
     }
 }

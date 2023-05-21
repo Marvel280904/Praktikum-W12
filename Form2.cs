@@ -34,7 +34,7 @@ namespace Praktikum_W12
         public void updatemanager()
         {
             a2 = new DataTable();
-            code = $"select m.manager_id,m.manager_name,t.team_name,m.birthdate, m.nationality_id, m.working from manager m\r\nleft join team t on m.manager_id = t.manager_id where t.team_id = '{namateam.SelectedValue.ToString()}';";
+            code = $"select m.manager_id,m.manager_name,t.team_name,m.birthdate, m.nationality_id, m.working from manager m\r\nleft join team t on m.manager_id = t.manager_id where t.team_id = '{namateam.SelectedValue}';";
             con = new MySqlConnection(connect);
             cmd = new MySqlCommand(code, con);
             da = new MySqlDataAdapter(cmd);
@@ -118,11 +118,6 @@ namespace Praktikum_W12
         private void dgv2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             idm = dgv2.SelectedCells[0].Value.ToString();
-            code = $"SELECT nation from nationality where nationality_id = '{dgv2.SelectedCells[4].Value}';";
-            con = new MySqlConnection(connect);
-            cmd = new MySqlCommand(code, con);
-            da = new MySqlDataAdapter(cmd);
-            da.Fill(a5);
         }
 
         private void dgv3_CellContentClick(object sender, DataGridViewCellEventArgs e)

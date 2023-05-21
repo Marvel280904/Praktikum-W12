@@ -29,7 +29,7 @@ namespace Praktikum_W12
         public void updateplyr()
         {
             a2 = new DataTable();
-            code = $"select p.player_id,p.player_name,n.nation,p.playing_pos,p.team_number, p.height, p.weight, p.birthdate, p.status from player p,nationality n where p.team_id = '{teamname.SelectedValue}' and n.nationality_id = p.nationality_id and p.status = '1';"; ;
+            code = $"select p.player_id,p.player_name,n.nation,p.playing_pos,p.team_number, p.height, p.weight, p.birthdate, p.status from player p,nationality n where p.team_id = '{teamname.SelectedValue}' and n.nationality_id = p.nationality_id and p.status = '1';";
             con = new MySqlConnection(connect);
             cmd = new MySqlCommand(code, con);
             da = new MySqlDataAdapter(cmd);
@@ -53,7 +53,7 @@ namespace Praktikum_W12
             {
                 try
                 {
-                    code = $"update manager set working = '0' where manager_id = '{idp}';";
+                    code = $"update player set status = '0' where player_id = '{idp}';";
                     con = new MySqlConnection(connect);
                     cmd = new MySqlCommand(code, con);
 
